@@ -14,7 +14,7 @@ namespace Stocks.Command.Infrastructure.Producers
             _config = config.Value;
         }
 
-        public async Task ProduceEvent<T>(string topic, T @event) where T : BaseEvent
+        public async Task ProduceAsync<T>(string topic, T @event) where T : BaseEvent
         {
             using var producer = new ProducerBuilder<string, string>(_config)
                 .SetKeySerializer(Serializers.Utf8)
