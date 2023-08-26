@@ -2,7 +2,7 @@
 
 namespace CQRS.Core.Commands
 {
-    public abstract class BaseCommand : BaseMessage
+    public abstract class BaseCommand : Message
     {
     }
 }
