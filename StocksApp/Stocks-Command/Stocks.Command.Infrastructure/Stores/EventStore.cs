@@ -1,5 +1,6 @@
 ﻿using CQRS.Core.Domain;
 using CQRS.Core.Events;
+using CQRS.Core.Exceptions;
 using CQRS.Core.Infrastructure;
 using CQRS.Core.Producers;
 using Stocks.Command.Domain.Aggregates;
