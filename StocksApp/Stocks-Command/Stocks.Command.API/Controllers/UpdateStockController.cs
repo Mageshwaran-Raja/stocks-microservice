@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CQRS.Core.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Stocks.Command.API.Controllers
@@ -7,5 +7,13 @@ namespace Stocks.Command.API.Controllers
     [ApiController]
     public class UpdateStockController : ControllerBase
     {
+        private readonly ILogger<UpdateStockController> _logger;
+        private readonly ICommandDispatcher _commandDispatcher;
+
+        public UpdateStockController(ILogger<UpdateStockController> logger, ICommandDispatcher commandDispatcher)
+        {
+            _logger = logger;
+            _commandDispatcher = commandDispatcher;
+        }
     }
 }
